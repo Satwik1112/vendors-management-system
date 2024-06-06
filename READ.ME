@@ -1,0 +1,26 @@
+This is only for Interview purpose.
+Created in BackEndPart
+have multiple urls mentioned below
+'vendors/' => handle_vendors
+    - simple get all vendors with details with GET request
+    - create vendors with POST request
+    - gives empty data when no vendors found
+'vendors/<int:vendor_id>/',  => handle_vendors
+    - get vendor from vendor id with details
+    - edit this vendor with PUT request
+    - delete this vendor with DELETE request
+    - gives message when vendor id is not found
+'vendors/<int:vendor_id>/performance' => vendor_performance
+    - gets required metrics data for particular vendor id
+    - gives message when vendor id is not found
+'purchase_order/' => handle_purchase_order
+    - get all purchase order
+    - gives empty data when no purchase order is found
+    - give vendor_code in data for getting all vendor's purchase orders
+    - gives empty data when no purchase order is found for particular vendor if provided
+'purchase_order/<int:po_id>/' => handle_purchase_order
+    - get purchase order from po_id with details
+    - edit this purchase order with PUT request
+    - delete this purchase order with DELETE request
+    - gives message when purchase order id is not found
+'purchase_order/<int:po_id>/acknowledge' => handle_acknowledgmen
